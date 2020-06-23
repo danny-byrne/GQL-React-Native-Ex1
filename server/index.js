@@ -13,10 +13,10 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   dataSources: () => ({
-    PokeAPI: new PokeAPI()
+    pokeAPI: new PokeAPI()
   })
 });
 
 server.listen().then(({ url }) => {
-  console.log(`GQL server running at ${url}`)
-})
+  console.log(`GraphQL Server is running at ${url}`);
+});
